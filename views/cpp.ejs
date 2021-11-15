@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scholar Academy | Learn Java</title>
+</head>
+<%- include('./pieces/head.ejs')%>
+<body>
+    <center>
+        <div class="learn">
+            <h4>Scholar Academy.com</h4>
+            <a href="/loggedin?id=<%= student.id %>">HOME</a>
+            <a href="/login/library?id=<%= student.id %> ">LIBRARY</a>
+       
+        <a href="/learn?id=<%= student.id %>">LEARN</a>
+        
+        </div>
+    </center>
+
+    <style type="text/css">
+        <%- include('./cpp/cpp.css')%>
+    </style>
+    <div id="learn">
+        <div class="toplogo">
+            <center>
+                <%- include('./logo/cpp.ejs') %>
+<% arr=["intro", "variables", "char","strings", "arrays", "comments", "switch", "for", "while","pointers", "exceptions", "overloading", "file" ]%>
+            </center>
+        </div>
+        <%if(student.learningProgress.cpp>arr.length){ student.learningProgress.cpp=arr.length}%>
+        <div class="richcotent">
+           
+                <%- include(`./cpp/${arr[student.learningProgress.cpp-1]}.html`)%>
+                <a href="/learn/cpp?id=<%=student.id%>&&level=<%= +student.learningProgress.cpp+1%>"
+        </div>
+    </div>
+</body>
+
+</html> 
