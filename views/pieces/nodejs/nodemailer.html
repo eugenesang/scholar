@@ -1,0 +1,87 @@
+<div>
+  <link rel="stylesheet" href="/node.css">
+  <h2>The Nodemailer Module</h2>
+  <p>The Nodemailer module makes it easy to send emails from your computer. <br>
+    The Nodemailer module can be downloaded and installed using npm: <br>
+    C:\Users\Your Name>npm install nodemailer <br>
+    After you have downloaded the Nodemailer module, you can include the module in any application: <br>
+    var nodemailer = require('nodemailer');</p>
+   
+  <h2>Send an Email</h2>
+  <p>
+    Now you are ready to send emails from your server. <br>
+  Use the username and password from your selected email provider to send an email. <br> This tutorial will show you how to use your Gmail account to send an email: <br>
+  </p>
+ <div id="code">
+   
+ <p>
+  var nodemailer = require('nodemailer'); 
+ </p><br>
+  <br>
+  var transporter = nodemailer.createTransport({ <br>
+    service: 'gmail', br
+    <br>
+   <p>
+    auth: { <br>
+      user: 'youremail@gmail.com', <br>
+      pass: 'yourpassword' <br>
+    }
+   </p> <br>
+  }); <br>
+   <br>
+  var mailOptions = { <br>
+    <p>
+      from: 'youremail@gmail.com', <br>
+    to: 'myfriend@yahoo.com', <br>
+    subject: 'Sending Email using Node.js', <br>
+    text: 'That was easy!'
+    </p> <br>
+  }; <br>
+  <br>
+  transporter.sendMail(mailOptions, function(error, info){ <br>
+    if (error) { <br>
+      console.log(error); <br>
+   <p>
+  } else { <br>
+    console.log('Email sent: ' + info.response); <br>
+  } <br>
+});
+   </p>
+ 
+ </div>
+  <p> And that's it! Now your server is able to send emails.
+  </p> 
+ <p> Multiple Receivers <br>
+  To send an email to more than one receiver, add them to the "to" property of the mailOptions object, <br> separated by commas:</p>
+  
+ <h5> Send email to more than one address:</h5>
+ <div id="code">
+  var mailOptions = { <br>
+    <p>
+      from: 'youremail@gmail.com', <br>
+    to: 'myfriend@yahoo.com, myotherfriend@yahoo.com', <br>
+    subject: 'Sending Email using Node.js', <br>
+    text: 'That was easy!'
+    </p> <br>
+  }
+ </div>
+   
+  <p>
+    Send HTML <br>
+  To send HTML formatted text in your email, use the "html" property instead of the "text" property:
+  </p>
+ <h5>Sample</h5>
+ <h3> Send email containing HTML:</h3>
+  <div id="code">
+   <p>
+    var mailOptions = { <br>
+      from: 'mememail@gmail.com', <br>
+      to: 'myparento@gmail.com', <br>
+      subject: 'Sending Email using Node.js', <br>
+      
+   </p> '<h1>Welcome</h1>
+      <p>That was easy!</p>' <br>
+    }
+  </div>
+ 
+</div>
