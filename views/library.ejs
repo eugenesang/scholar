@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./pieces/head.ejs') %>
+
+    <body>
+        <div class="header">
+
+            <h1>SCOLAR ACA<b style="color:rgb(20, 240, 20);">DEMY.COM</b></h1>
+
+            <!-- the navigation section -->
+            <div class="learn">
+                
+                <a href="/login/stud=<%= student.id %>">HOME</a>
+                <a href="/login/library?id=<%= student.id %> ">LIBRARY</a>
+           
+            <a href="/learn?id=<%= student.id %>">LEARN</a>
+
+            <!-- end of navigation -->
+        </div>
+
+        <!-- end of header section -->
+
+        <hr>
+
+        <!-- the inputs section -->
+
+        <input type="checkbox" id="check">
+
+
+        <!-- the end of inputs -->
+        <!--the dashboard section-->
+        <!--  -->
+        
+        <!--  -->
+        <div class="container">
+            <label for="check">
+                <span class="times" id="times">
+                  <%- include('./logo/cancel.ejs') %>  
+                      
+                </span>
+                <span class="bars" id="btn"> 
+                  <%- include('./logo/bars.ejs') %> 
+                  </span>
+                
+               </label>
+          
+                      <div class="head">Dashboard</div>
+                      <ol>
+                          <li>
+                              <a href="#"> <%- include('./logo/profile.ejs') %>PROFILE</a>
+                              <div id="profile">
+                                  <ul>
+                                      <li>
+                                          <%= info.name%>
+                                      </li>
+                                      <li>
+                                          <%= info.age%>
+                                      </li>
+                                      <li>
+                                          <%= info.gender%>
+                                      </li>
+                                  </ul>
+          
+                              </div>
+                          </li>
+                         
+                          <li><a href="/info/help">
+                              <%- include('./logo/comment.ejs') %>HELP DESK</a></li>
+                         
+                          <li><a href="/info/contact"><%- include('./logo/phone.ejs') %>CONTACT US</a></li>
+                          <li><a href="/info/about">
+                              <%- include('./logo/exclamation.ejs') %>ABOUT US</a></li>
+                          
+                      </ol>
+                  
+            <hr>
+            <center>
+                <p>&copy copyright 2021</p>
+            </center>
+        </div>
+
+        <!--end of dashboard section -->
+        <div class="section">
+
+
+            <center>
+                <form action="/login/search" method="POST">
+                    <div id="home-search">
+
+                        <input type="text" placeholder="Search For Books Or Videos Here" id="library-search" name="question"><button>SEARCH</button>
+                        <input type="search" name="id" value="<%= student.id %>" style="visibility: hidden;">
+                    </div>
+                </form>
+            </center>
+            <a href="/?:<%= student.email %> "></a>
+            <nav id="lib">
+                <ul>
+                    <li> <select name="choose" id="select"> 
+          <option value="videos">Videos</option>
+          <option value="books">Books</option>
+        </select>
+                    </li>
+                    <li><a href="#">BOOKS/JOURNALS</a></li>
+                    <li><a href="#">videos</a></li>
+                </ul>
+            </nav>
+            <br>
+            <hr>
+
+            <% if(myLib!=null){ %>
+                <center>
+                    <h4 id="results">showing results for....
+                        <%= question %> .</h4>
+                </center>
+                <Div id="lib-div">
+                    <% for(book of myLib){ %>
+                        <div class="lib-divs">
+                            <h3>
+                                <%= book.title %>
+                            </h3>
+                            by
+                            <%= book.author %> <br>
+                                <a href="<%= book.link %> " download>
+                                    <%= book.description%>
+                                </a>
+                                <hr style="width:50%; color:aqua;">
+                        </div>
+
+                        <%}%>
+                </Div>
+                <% } %>
+
+                    <!--the top region with nav and searchbox-->
+
+        </div>
+
+        <!--the footer section-->
+
+       
+        <footer>
+            <div class="footer">
+             <div class="contact-us">
+               <h3>CONTACT US:</h3>
+               <h5>
+                <h5>
+                    <a href="#"><%- include('./logo/phone.ejs') %> phone Call+2547777777</a></
+                     </h5>
+                     <h5>
+                        <a href="#"><%- include('./logo/mail.ejs') %> Email scholaracademy@gmail.com</a></
+                         </h5>
+             </div>
+             <div class="about-us">
+                <h3>ABOUT US:</h3>
+                <p><a href="#">Our services</a></p>
+                <p><a href="#">Our customers</a></p>
+                <p><a href="#">Our products</a></p>
+                <p><a href="#">Our online services</a></ p>
+                    
+             </div>
+             <div class="follow-us">
+               <h4>Follow Us:</h4>
+               
+               <h5>
+                <a href="#"><%- include('./logo/facebook.ejs') %> Facebook</a></h5> 
+                 <h5>
+                    <a href="#"><%- include('./logo/twitter.ejs') %> Twitter</a></h5> 
+               <h5>
+                <a href="#"><%- include('./logo/telegram.ejs') %> Telegram</a></h5> 
+               <h5>
+                <a href="#"><%- include('./logo/youtube.ejs') %> Youtube</a></h5> 
+                
+             </div>
+            </div>
+          
+          <hr>
+          <center>
+           <p id="copy">&copy Copyright 2021. ALL RIGHTS RESERVED</p>
+          </center>
+          </footer>    </body>
+
+</html> 
