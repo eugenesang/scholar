@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<%- include( './pieces/head.ejs') %>
+
+    <body>
+        
+            <%-include("./pieces/header.ejs")%>
+        
+        <center>
+            <div id="help">
+                <form action="/info/comment" method="post">
+                    <h2> OUR HELP DESK/CENTER
+                    </h2>
+
+                    <input type="email" placeholder="email" name="email"> <br>
+
+                    <input type=" text " name="name" placeholder=" name "> <br>
+
+                    <input type="text " name="subject" placeholder="subject "> <br>
+                    <textarea name="message" id="textarea " cols="30 " rows="5 " placeholder=" Type your message here "></textarea> <br>
+                    <br>
+                    <button id="send">Send</button>
+                </form>
+            </div>
+        </center>
+        
+        <%-include("./pieces/footer.ejs")%>
+    </body>
+
+</html> 
