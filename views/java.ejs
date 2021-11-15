@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scholar Academy | Learn Java</title>
+</head>
+<%- include('./pieces/head.ejs')%>
+<body>
+    <center>
+        <div class="learn">
+            <h4>Scholar Academy.com</h4>
+            <a href="/login?id=<%= student.id %>">HOME</a>
+            <a href="/login/library?id=<%= student.id %> ">LIBRARY</a>
+       
+        <a href="/learn?id=<%= student.id %>">LEARN</a>
+        
+        </div>
+    </center>
+
+    <style type="text/css">
+        <%- include('./java/java.css')%>
+    </style>
+    <div id="learn">
+        <div class="toplogo">
+            <center>
+                <%- include('./logo/java.ejs') %>
+<% arr=["introduction", "datatypes", "strings", "objects", "constructor", "excemption", "inheritance", "control" ]%>
+            </center>
+        </div>
+        <%if(student.learningProgress.java>arr.length){ student.learningProgress.java=arr.length}%>
+        <div class="richcotent">
+           
+                <%- include(`./java/${arr[student.learningProgress.java-1]}.html`)%>
+                <a href="/learn/java?id=<%=student.id%>&&level=<%= +student.learningProgress.java+1%>"
+        </div>
+    </div>
+</body>
+
+</html>
