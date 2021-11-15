@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scholar Academy | Learn Java</title>
+</head>
+<%- include('./pieces/head.ejs')%>
+<body>
+    <center>
+        <div class="learn">
+            <h4>Scholar Academy.com</h4>
+            <a href="/login?id=<%= student.id %>">HOME</a>
+            <a href="/login/library?id=<%= student.id %> ">LIBRARY</a>
+       
+        <a href="/learn?id=<%= student.id %>">LEARN</a>
+        
+        </div>
+    </center>
+
+    <style type="text/css">
+        <%- include('./nodejs/node.css')%>
+        <%- include("./nodejs/es6.css")%>
+    </style>
+    <div id="learn">
+        <div class="toplogo">
+            <center>
+                <%- include('./logo/nodejs.ejs') %>
+<%arr=["intro", "modules", "file", "url", "npm", "web", "formidable", "mailer", "events","es6intro", "jsclasses", "jspromises","loopingarray", "mathmethods", "newmethods", "symbol" ]%>
+     </center>
+        </div>
+        <%if(student.learningProgress.javascript>arr.length){ student.learningProgress.javascript=arr.length}%>
+        <div class="richcotent">
+           
+                <%- include(`./nodejs/${arr[student.learningProgress.javascript-1]}.html`)%>
+                <a href="/learn/javascript?id=<%=student.id%>&&level=<%= +student.learningProgress.javascript+1%>"
+        </div>
+    </div>
+</body>
+
+</html> 
