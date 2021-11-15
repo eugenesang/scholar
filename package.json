@@ -1,0 +1,25 @@
+{
+  "name": "scholar-academy",
+  "version": "1.2.1",
+  "description": "online school",
+  "main": "app.js",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "mongoose": "^5.13.2",
+    "mongose": "0.0.2-security"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  },
+  "scripts": {
+    "start": "nodemon app",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Eugene",
+  "license": "ISC",
+  "keywords": [
+    "app"
+  ]
+}
+ 
