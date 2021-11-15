@@ -1,0 +1,110 @@
+<div>
+  <link rel="stylesheet" href="/node.css">
+  <h2>Node.js as a Web Server</h2>
+  <p>The HTTP module can create an HTTP server that listens to server ports and gives a response back to the client.
+    Use the createServer() method to create an HTTP server:
+  </p>
+    <div id="code">
+      Example
+    var http = require('http');
+    </div>
+    
+   <p> //create a server object:</p>
+    <div id="code">
+      http.createServer(function (req, res) {
+        res.write('Hello World!'); <p>//write a response to the client</p>
+        res.end(); <p>//end the response</p>
+      }).listen(8080); <p>//the server object listens on port 8080</p>
+    </div>
+    
+   <p> The function passed into the http.createServer() method, will be executed when someone tries to access the computer on port 8080.</p>
+   <h3>Add an HTTP Header</h3>
+    <p>If the response from the HTTP server is supposed to be displayed as HTML, you should include an HTTP header with the correct content type:</p>
+   <div id="code"><div>
+  <link rel="stylesheet" href="/node.css">
+  <h2>Node.js Events</h2>
+<h5>Node.js is perfect for event-driven applications.</h5>
+  <h4> Events in Node.js</h4> 
+  
+  <p>Every action on a computer is an event. Like when a connection is made or a file is opened. <br>
+    Objects in Node.js can fire events, like the readStream object fires events when opening and closing a file:
+    </p> 
+ 
+ <h4>Sample</h4>
+  <div id="code">
+    var fs = require('fs'); <br>
+  var rs = fs.createReadStream('./demofile.txt'); <br>
+  <p>
+    rs.on('open', function () { <br>
+      console.log('The file is open'); <br>
+    });
+  </p> <br>
+  
+  </div>
+   
+  <h2>Events Module</h2>
+  <p>Node.js has a built-in module, called "Events", where you can create-, fire-, and listen for- your own events. <br>
+    To include the built-in Events module use the require() method. In addition, all event properties and methods  br
+    are an instance of an EventEmitter object. To be able to access these properties and methods, <br> create an EventEmitter object:
+    </p>
+  <div id="code">
+    var events = require('events'); <br>
+  <p>
+    var eventEmitter = new events.EventEmitter();
+  </p>
+  </div>
+   
+  <h3>The EventEmitter Object</h3>
+ <p> You can assign event handlers to your own events with the EventEmitter object. <br>
+  In the example below we have created a function that will be executed when a "scream" event is fired. <br>
+  To fire an event, use the emit() method.</p>
+  Example
+ <div id="code">
+  var events = require('events'); <br>
+  var eventEmitter = new events.EventEmitter(); <br>
+ 
+  <br>
+ <p> //Create an event handler:</p> <br>
+  var myEventHandler = function () { <br>
+    console.log('I hear a scream!'); <br>
+  } <br>
+  <p> <br>
+    <p>//Assign the event handler to an event:</p> </p><br>
+  eventEmitter.on('scream', myEventHandler); <br>
+  <br>
+  <p>//Fire the 'scream' event:</p> <br>
+  eventEmitter.emit('scream');
+</div>
+  
+   
+  
+</div>
+    
+    <h3>sample</h3>
+    var http = require('http');<br>
+    http.createServer(function (req, res) {<br>
+      res.writeHead(200, {'Content-Type': 'text/html'});<br>
+     <p> res.write('Hello World!');<br>
+      res.end();<br>
+    }).listen(8080); <br></p>
+   </div>
+    
+    <p>The first argument of the res.writeHead() method is the status code, 200 means that all is OK, the second argument is an object containing the response headers.</p>
+     
+   <h3> Read the Query String</h3>
+   <p>
+    The function passed into the http.createServer() has a req argument that represents the request from the client, as an object (http.IncomingMessage object). <br>
+    This object has a property called "url" which holds the part of the url that comes after the domain name:</p>
+   
+    
+    <div id="code">
+      demo_http_url.js <br>
+      var http = require('http'); <br>
+     <p> http.createServer(function (req, res) { <br>
+      res.writeHead(200, {'Content-Type': 'text/html'}); <br>
+      res.write(req.url); <br>
+      res.end(); <br></p>
+      }).listen(8080); <br>
+    </div>
+    
+</div> 
