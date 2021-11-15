@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('./pieces/head.ejs') %>
+
+    <body>
+
+
+        <!-- the header section -->
+
+        <div class="header">
+
+            <h1>SCOLAR ACA<b style="color:rgb(20, 240, 20);">DEMY.COM</b></h1>
+
+            <!-- login -->
+
+            <center>
+                <div class="login" id="profile-display">
+                    <h5>
+                    <a href="#"> <%- include('./logo/profile.ejs') %> <br>
+                        <br> <%= info.name %></a>
+                    </h5>
+                </div>
+            </center>
+
+
+            <!--end of login section -->
+
+            
+        </div>
+
+        <!-- end of header section -->
+
+      
+
+        <!-- the inputs section -->
+
+        <input type="checkbox" id="check">
+
+
+        <!-- the end of inputs -->
+
+        <!--the dashboard section-->
+
+        <div class="container">
+            <label for="check">
+      <span class="times" id="times">
+        <%- include('./logo/cancel.ejs') %>  
+            
+      </span>
+      <span class="bars" id="btn"> 
+        <%- include('./logo/bars.ejs') %> 
+        </span>
+      
+     </label>
+
+            <div class="head">Dashboard</div>
+            <ol>
+                <li>
+                    <a href="#"> <%- include('./logo/profile.ejs') %>PROFILE</a>
+                    <div id="profile">
+                        <ul>
+                            <li>
+                                <%= info.name%>
+                            </li>
+                            <li>
+                                <%= info.age%>
+                            </li>
+                            <li>
+                                <%= info.gender%>
+                            </li>
+                        </ul>
+
+                    </div>
+                </li>
+               
+                <li><a href="/info/help">
+                    <%- include('./logo/comment.ejs') %>HELP DESK</a></li>
+               
+                <li><a href="/info/contact"><%- include('./logo/phone.ejs') %>CONTACT US</a></li>
+                <li><a href="/info/about">
+                    <%- include('./logo/exclamation.ejs') %>ABOUT US</a></li>
+                
+            </ol>
+            <hr>
+            <center>
+                <p>&copy copyright 2021</p>
+            </center>
+        </div>
+
+        <!--end of dashboard section -->
+        <div class="section">
+
+            <center>
+                <div class="home2">
+                    <a href="/login/library?id=<%= student.id %>" >LIBRARY</a>
+               
+                <a href="/learn?id=<%= student.id %>">LEARN</a>
+                </div>
+                <!--animatiom div in home page-->
+
+                <div class=" quote ">
+                    <p> Our mission is to dedicate ourself to outstanding programming<br> that empowers our client to excel in their markets <br> , make meaningful conventions with their audiences and improve their productivity</p>
+                    <p>Explore More with Scholar Academy Which other couldn't. <br> <b style="color: rgb(55, 241, 55); margin: 5px; ">GET Brilliant Solution's</b></p>
+                    <p>Take your skills to the next level.
+                    </p>
+                        <a href="# " id="explore ">EXPLORE NOW</a>
+                </div>
+
+                <!--promo courses section-->
+
+                <div id="pool">
+                    <h1>Enroll To Our Courses</h1>
+                    <div id="programs">
+                        <div id="pro">
+                            <h3>Python</h3>
+                            <div class="logo">
+                                <%- include('./logo/python.ejs') %>
+                            </div>
+                            <br>
+                            <a href="#">Enroll Now </a></div>
+                        <div id="pro">
+                            <h3>
+
+                            </h3>
+                            <div class="logo">
+                                <%- include('./logo/java.ejs') %>
+                            </div>
+                            <br>
+                            <a href="/learn/java?id=<%= student.id %>">Enroll Now </a>
+                        </div>
+                        <div id="pro">
+                            <h3>CSS 3</h3>
+                            <div class="logo">
+                                <%- include('./logo/css.ejs') %>
+                            </div>
+                            <br>
+                            <a href="#">Enroll Now </a></div>
+                        <div id="pro">
+                            <h3>HTML5</h3>
+                            <div class="logo">
+                                <%- include('./logo/html.ejs') %>
+                            </div>>
+                            <br>
+                            <a href="#">Enroll Now </a></div>
+                        <div id="pro">
+                            <h3>Kotlin</h3>
+                            
+                                <br>
+                                <a href="#">Enroll Now </a></div>
+                        <div id="pro">
+                            <h3>C++</h3>
+                            <div class="logo">
+                                <%- include('./logo/cpp.ejs') %>
+                            </div>
+                            <br>
+                            <a href="#">Enroll Now </a></div>
+                        <div id="pro">
+                            <h3>JavaScript</h3>
+                            <div class="logo">
+                                <%- include('./logo/js.ejs') %>
+                            </div>
+                            <br>
+                            <a href="#">Enroll Now </a></div>
+                        <div id="pro">
+                            <h3>JQuery</h3>
+                            <%- include('./logo/JQuery.ejs') %>
+                                <br>
+                                <a href="#">Enroll Now </a></div>
+                        <div id="pro">
+                            <h3>Node Js</h3>
+                            <div class="logo">
+                                <%- include('./logo/nodejs.ejs') %>
+                            </div>
+                            <br>
+                            <a href="#">Enroll Now </a></div>
+                        <div id="pro">
+                            <h3>SQL</h3>
+                            <%- include( './logo/mySql.ejs')%>
+                                <br>
+                                <a href="#">Enroll Now </a> </div>
+                        <div id="pro">
+                            <h3>Php</h3>
+                            <%- include('./logo/php.ejs') %>
+                                <br>
+                                <a href="#">Enroll Now </a></div>
+                    </div>
+                </div>
+                <d iv id="classics ">
+                    <div id="skills ">
+
+                        <!--more site products section-->
+                        <h3>Learn The Latest <br> Skills. <br> <i class="fa fa-space-shuttle " aria-hidden="true "></i></h3>
+                    </div>
+                    <d iv id="career ">
+                        <h3>Get Read For <br>
+
+
+        </div>
+        </div>
+
+
+        </center>
+        </div>
+
+        <!--the footer section-->
+
+        <footer>
+            <div class="footer">
+             <div class="contact-us">
+               <h3>CONTACT US:</h3>
+               <h5>
+                <h5>
+                    <a href="#"><%- include('./logo/phone.ejs') %> phone Call+2547777777</a></
+                     </h5>
+                     <h5>
+                        <a href="#"><%- include('./logo/mail.ejs') %> Email scholaracademy@gmail.com</a></
+                         </h5>
+             </div>
+             <div class="about-us">
+                <h3>ABOUT US:</h3>
+                <p><a href="#">Our services</a></p>
+                <p><a href="#">Our customers</a></p>
+                <p><a href="#">Our products</a></p>
+                <p><a href="#">Our online services</a></ p>
+                    
+             </div>
+             <div class="follow-us">
+               <h4>Follow Us:</h4>
+               
+               <h5>
+                <a href="#"><%- include('./logo/facebook.ejs') %> Facebook</a></h5> 
+                 <h5>
+                    <a href="#"><%- include('./logo/twitter.ejs') %> Twitter</a></h5> 
+               <h5>
+                <a href="#"><%- include('./logo/telegram.ejs') %> Telegram</a></h5> 
+               <h5>
+                <a href="#"><%- include('./logo/youtube.ejs') %> Youtube</a></h5> 
+                
+             </div>
+            </div>
+          
+          <hr>
+          <center>
+           <p id="copy">&copy Copyright 2021. ALL RIGHTS RESERVED</p>
+          </center>
+          </footer>
+    </body>
+
+</html> 
