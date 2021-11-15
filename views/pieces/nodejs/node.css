@@ -1,0 +1,30 @@
+*{
+  margin: 3px;
+  padding: 4px;
+}
+
+#code {
+  background-color: rgb(17, 17, 17);
+  color: rgb(197, 236, 20);
+  padding: 8px;
+  margin: 5px;
+  box-shadow: 0px 1px 5px 0px;
+  border-radius: 10px;
+  width: 40%;
+  overflow-y: auto;
+  max-height: 40vh;
+  min-height: 15vh;
+}
+#code h1 {
+  color: white;
+  font-size: 18px;
+}
+#code h4 {
+  color: white;
+}
+#code h5 {
+  color: white;
+}
+#code p {
+  color: rgb(25, 233, 25);
+} 
