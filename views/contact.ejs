@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include("./pieces/head.ejs") %>
+
+        <body>
+            <div class="home1">
+                <h3>ScholarAcademy.com</h3>
+                <center>
+                    <a href="/">HOME </a>
+                <a href="/info/about">ABOUT US </a>
+            <a href="/info/contact">CONTACT US</a>
+            <a href="/info/help">HELP DESK</a>
+        </center>
+            </div>
+            
+
+            <!--the contact content-->
+
+            <div id="contact">
+                <center>
+                    <h2>Contact Us</h2>
+                    <h5>
+                        <a href="#"><%- include('./logo/phone.ejs') %> phone Call+2547777777</a></
+                         </h5>
+                         <h5>
+                            <a href="#"><%- include('./logo/mail.ejs') %> Email scholaracademy@gmail.com</a></
+                             </h5>
+                    <div id="contact1">
+
+                        <!--the contact us form-->
+
+                        <form action="post">
+                            <label for="name">Name:</label> <br>
+                            <input type="text" placeholder="Your name"> <br>
+                            <label for="name">Number:</label> <br>
+                            <input type="number" placeholder="Your Number"> <br>
+                            <label for="name">Subject:</label> <br>
+                            <input type="text" placeholder="Your Subject"> <br>
+                            <label for="sms"> Write Your Message Here</label> <br>
+                            <textarea name="sms" id="" cols="30" rows="3" placeholder="Write your message"></textarea>
+                            <input type="submit" value="Send" id="submit">
+                        </form>
+                    </div>
+
+                    <!-- follow us form-->
+
+                    <div id="follow">
+                        <h4>Follow Us:</h4>
+                        <h5>
+                            <a href="#"><%- include('./logo/facebook.ejs') %> Facebook</a></h5> 
+                             <h5>
+                                <a href="#"><%- include('./logo/twitter.ejs') %> Twitter</a></h5> 
+                           <h5>
+                            <a href="#"><%- include('./logo/telegram.ejs') %> Telegram</a></h5> 
+                           <h5>
+                            <a href="#"><%- include('./logo/youtube.ejs') %> Youtube</a></h5>
+                    </div> <br>
+                </center>
+            </div>
+
+            <!--the footer section-->
+
+            
+        <footer>
+            <div class="footer">
+             <div class="contact-us">
+               <h3>CONTACT US:</h3>
+               <h5>
+                <h5>
+                    <a href="#"><%- include('./logo/phone.ejs') %> phone Call+2547777777</a></
+                     </h5>
+                     <h5>
+                        <a href="#"><%- include('./logo/mail.ejs') %> Email scholaracademy@gmail.com</a></
+                         </h5>
+             </div>
+             <div class="about-us">
+                <h3>ABOUT US:</h3>
+                <p><a href="#">Our services</a></p>
+                <p><a href="#">Our customers</a></p>
+                <p><a href="#">Our products</a></p>
+                <p><a href="#">Our online services</a></ p>
+                    
+             </div>
+             <div class="follow-us">
+               <h4>Follow Us:</h4>
+               
+               <h5>
+                <a href="#"><%- include('./logo/facebook.ejs') %> Facebook</a></h5> 
+                 <h5>
+                    <a href="#"><%- include('./logo/twitter.ejs') %> Twitter</a></h5> 
+               <h5>
+                <a href="#"><%- include('./logo/telegram.ejs') %> Telegram</a></h5> 
+               <h5>
+                <a href="#"><%- include('./logo/youtube.ejs') %> Youtube</a></h5> 
+                
+             </div>
+            </div>
+          
+          <hr>
+          <center>
+           <p id="copy">&copy Copyright 2021. ALL RIGHTS RESERVED</p>
+          </center>
+          </footer>
+        </body>
+
+</html>
