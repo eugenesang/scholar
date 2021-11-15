@@ -1,0 +1,45 @@
+<div>
+  <link rel="stylesheet" href="/node.css">
+ <h2> Node.js as a File Server</h2>
+<p>The Node.js file system module allows you to work with the file system on your computer.
+  To include the File System module, use the require() method:</p>
+<h4>var fs = require('fs'); <br>
+  Common use for the File System module:</h4>
+<ul>
+  <li>
+    Rename files
+  </li>
+  <li>
+    Read files
+  </li>
+  <li>
+    Create files
+  </li>
+  <li>
+    Update files
+  </li>
+  <li>
+    Delete files
+  </li>
+</ul>
+ 
+ 
+<h4>Read Files</h4>
+<p>The fs.readFile() method is used to read files on your computer.
+  Assume we have the following HTML file (located in the same folder as Node.js):
+  demofile1.html</p>
+  <div id="code">
+  <h5>  Example</h5>
+<p id="top">var http = require('http')</p> ; <br>
+var fs = require('fs'); <br>
+http.createServer(function (req, res) { <br>
+  <p>fs.readFile('demofile1.html', function(err, data) { <br>
+    res.writeHead(200, {'Content-Type': 'text/html'}); <br>
+    res.write(data); <br>
+    return res.end(); <br></p>
+  }); <br>
+}).listen(8080); <br>
+
+  </div>
+
+</div> 
