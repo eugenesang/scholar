@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('./pieces/head.ejs') %>
+
+    <body>
+        
+<center>
+    <div class="learn">
+        <h4>Scholar Academy.com</h4>
+        <a href="/loggedin?id=<%= student.id %>">HOME</a>
+        <a href="/login/library?id=<%= student.id %> ">LIBRARY</a>
+   
+    <a href="/learn?id=<%= student.id %>">LEARN</a>
+    
+    </div>
+    <h3>
+        Select Your Study Course:
+    </h3>
+    <div id="learnunits">
+        <div id="docunits">
+            <div id="jsl">
+                
+                <%- include( './logo/js.ejs') %>
+                <br>
+                <br>
+                <h3>
+                    <a href="/learn/javascript?id=<%=student.id%>">JavaScript</a>
+                </h3>
+            </div>
+            <div id="javal">
+               
+    
+                <%- include( './logo/java.ejs') %>
+                <br>
+                <br>
+                <h3>
+                    <a href="/learn/java?id=<%= student.id %>">JAVA</a>
+                </h3>
+            </div>
+        </div>
+        <div id="docunits">
+            <div id="htmll">
+                
+                <%- include( './logo/html.ejs') %>
+                <br>
+                <br>
+                <h3>
+                    <a>HTML</a>
+                </h3>
+            </div>
+            <div id="cssl">
+               
+                <%- include('./logo/css.ejs') %>
+                <br>
+                <br>
+                <h3>
+                    <a>CSS</a>
+                </h3>
+            </div>
+        </div>
+        <div id="docunits">
+            <div id="pythonl">
+                
+                <%- include('./logo/python.ejs') %>
+                <br>
+                <br>
+                <h3>
+                    <a>Python</a>
+                </h3>
+            </div>
+      
+            <div id="cppl">
+                
+                <%- include('./logo/cpp.ejs') %>
+                <br>
+                <br>
+                <h3>
+                    <a href="/learn/cpp?id=<%=student.id%>">C++</a>
+                </h3>
+            </div>  
+        </div>
+    </div>
+</center>
+    <center>
+        
+        <footer>
+            <div class="footer">
+             <div class="contact-us">
+               <h3>CONTACT US:</h3>
+               <h5>
+                <h5>
+                    <a href="#"><%- include('./logo/phone.ejs') %> phone Call+2547777777</a></
+                     </h5>
+                     <h5>
+                        <a href="#"><%- include('./logo/mail.ejs') %> Email scholaracademy@gmail.com</a></
+                         </h5>
+             </div>
+             <div class="about-us">
+                <h3>ABOUT US:</h3>
+                <p><a href="#">Our services</a></p>
+                <p><a href="#">Our customers</a></p>
+                <p><a href="#">Our products</a></p>
+                <p><a href="#">Our online services</a></ p>
+                    
+             </div>
+             <div class="follow-us">
+               <h4>Follow Us:</h4>
+               
+               <h5>
+                <a href="#"><%- include('./logo/facebook.ejs') %> Facebook</a></h5> 
+                 <h5>
+                    <a href="#"><%- include('./logo/twitter.ejs') %> Twitter</a></h5> 
+               <h5>
+                <a href="#"><%- include('./logo/telegram.ejs') %> Telegram</a></h5> 
+               <h5>
+                <a href="#"><%- include('./logo/youtube.ejs') %> Youtube</a></h5> 
+                
+             </div>
+            </div>
+          
+          <hr>
+          <center>
+           <p id="copy">&copy Copyright 2021. ALL RIGHTS RESERVED</p>
+          </center>
+          </footer>
+    </center>  
+       
+        
+    </body>
+
+</html> 
