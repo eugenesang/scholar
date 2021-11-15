@@ -1,0 +1,45 @@
+<div>
+  <link rel="stylesheet" href="/node.css">
+  <h2>Node.js Modules</h2>
+  <p>Consider modules to be the same as JavaScript libraries.
+    A set of functions you want to include in your application.
+    </p>
+    <h3>Built-in Modules</h3>
+    <p>Node.js has a set of built-in modules which you can use without any further installation.</p>
+    <h2>Include Modules</h2>
+    <p>To include a module, use the require() function with the name of the module: <br>
+      <br>
+      var http = require('http'); <br>
+      <br>
+      Now your application has access to the HTTP module, and is able to create a server:
+      </p>
+      <div id="code">
+        http.createServer(function (req, res) { <br>
+          <p>res.writeHead(200, {'Content-Type': 'text/html'}); <br>
+            res.end('Hello World!'); <br></p>
+        }).listen(8080); <br>
+      </div>
+        <h3>Create Your Own Modules.</h3>
+        <p>You can create your own modules, and easily include them in your applications.
+          The following example creates a module that returns a date and time object:
+          </p>
+        <div id="code">
+          <h4>Sample</h4>
+          <p>exports.myDateTime = function () {</p> <br>
+            return Date(); <br>
+          }; <br>
+          
+      
+        
+      </div>
+     <h3> Node.js HTTP Module</h3>
+
+ 
+<h4>The Built-in HTTP Module</h4>
+<p>Node.js has a built-in module called HTTP, which allows Node.js to transfer data over the Hyper Text Transfer Protocol (HTTP).
+  To include the HTTP module, use the require() method:</p>
+<div id="code">
+  var http = require('http');<br>
+</div>
+
+</div> 
