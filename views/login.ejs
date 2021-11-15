@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("./pieces/head.ejs") %> 
+<body>
+  <center>
+
+ <div class="form">
+      <form action="/login/stud" method="POST">
+        <h3>ENTER YOUR LOG IN DETAILS</h3>
+        <div id="profile">
+          <%- include('./logo/profile.ejs') %>
+        </div><br>
+       
+        <input type="email" placeholder=" Enter your Email" name="email" required> <br>
+        
+        <input type="password" placeholder="Enter your Password" name="password" required> <br>
+        <input type="submit" value="login" id="login">
+        <br>
+      </form>
+      <a href="/password/forgot">forgot password?</a> <br>
+        <a href="/register">create account?</a>
+    </div>
+  </center>
+</body>
+</html>
