@@ -1,0 +1,107 @@
+<div>
+  <link rel="stylesheet" href="/node.css">
+  <h2>
+    The Formidable Module
+  </h2>
+  <p>There is a very good module for working with file uploads, called "Formidable". <br>
+    The Formidable module can be downloaded and installed using NPM: <br>
+    C:\Users\Your Name>npm install formidable <br>
+    After you have downloaded the Formidable module, you can include the module in any application:</p>
+  <div id="code">
+    var formidable = require('formidable');
+  </div>
+   
+  <h2>
+    Upload Files
+  </h2>
+  <p>Now you are ready to make a web page in Node.js that lets the user upload files to your computer: <br>
+    Step 1: Create an Upload Form <br>
+    Create a Node.js file that writes an HTML form, with an upload field: <br>
+    </p>
+  <h4>This code will produce an HTML form:</h4>
+<div id="code">
+  var http = require('http'); <br>
+
+  <br>
+  http.createServer(function (req, res) { <br>
+    res.writeHead(200, {'Content-Type': 'text/html'}); <br>
+    res.write(<p>'<form action="fileupload" method="post" enctype="multipart/form-data"></form></p>'); <br>
+    res.write('<p><input type="file" name="filetoupload"></p><br>'); <br>
+    res.write('<p><input type="submit"></p>'); <br>
+    res.write('</form>'); <br>
+    return res.end(); <br>
+<p>  }).listen(8080);</p> <br>
+</div>
+ <p> Step 2: Parse the Uploaded File <br>
+  Include the Formidable module to be able to parse the uploaded file once it reaches the server. <br>
+  When the file is uploaded and parsed, it gets placed on a temporary folder on your computer. <br>
+  Example <br>
+  The file will be uploaded, and placed on a temporary folder:</p>
+  <div id="code">
+    var http = require('http'); <br>
+  var formidable = require('formidable'); <br>
+   <br>
+<p>
+  http.createServer(function (req, res) { <br>
+    if (req.url == '/fileupload') {
+</p> <br>
+      var form = new formidable.IncomingForm(); <br>
+      form.parse(req, function (err, fields, files) { <br>
+<br>
+        res.write('File uploaded'); <br>
+        <p>res.end(); <br>
+        }); <br>
+      } else { <br></p>
+      res.writeHead(200, {'Content-Type': 'text/html'}); <br>
+      res.write('<p><form action="fileupload" method="post" enctype="multipart/form-data"></form></p>'); <br>
+      res.write('<p><input type="file" name="filetoupload"></p><br>');
+      res.write('<p><input type="submit">'</p>); <br>
+      res.write('</form>'); <br>
+      return res.end(); <br>
+    } <br>
+  }).listen(8080); <br>
+   
+  </div>
+   
+  <p>
+    Step 3: Save the File
+  When a file is successfully uploaded to the server, it is placed on a temporary folder. <br>
+  The path to this directory can be found in the "files" object, passed as the third argument in the parse() method's  br
+  callback function. <br>
+  To move the file to the folder of your choice, use the File System module, and rename the file: <br>
+  Include the fs module, and move the file to the current folder: <br>
+ 
+  </p>
+  <div id="code">
+    var http = require('http'); <br>
+    var formidable = require('formidable'); <br>
+    var fs = require('fs'); <br>
+     <br>
+    http.createServer(function (req, res) { <br>
+      if (req.url == '/fileupload') { <br>
+      <p>  var form = new formidable.IncomingForm();</p> <br>
+        form.parse(req, function (err, fields, files) { <br>
+        <p>
+          var oldpath = files.filetoupload.path; <br>
+          var newpath = 'C:/Users/Your Name/' + files.filetoupload.name;
+        </p> <br>
+          fs.rename(oldpath, newpath, function (err) { <br>
+            if (err) throw err; <br>
+           <p>
+            res.write('File uploaded and moved!'); <br>
+            res.end();
+           </p> <br>
+          }); <br>
+     }); <br>
+      } else { <br>
+        res.writeHead(200, {'Content-Type': 'text/html'}); <br>
+        res.write('<p><form action="fileupload" method="post" enctype="multipart/form-data"></form></p>'); <br>
+        res.write('<p><input type="file" name="filetoupload"></p><br>'); <br>
+        res.write('<p><input type="submit">'</p>); <br>
+        res.write('</form>'); <br>
+        return res.end(); <br>
+      } <br>
+    }).listen(8080);
+  </div>
+  
+</div> 
