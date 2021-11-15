@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./pieces/head.ejs') %>
+
+    <body>
+        <center>
+
+            <div class="form">
+                <form action="/password/forgot" method="POST">
+                    <h3>ENTER YOUR LOG IN DETAILS</h3>
+                    <i class="fa fa-user-circle" aria-hidden="true"></i> <br>
+                    <input type="text" placeholder="Your Phone Number" name="phone" required="true" />
+
+                    <input type="email" placeholder=" Enter your Email" name="email" required> <br>
+
+                    <input type="password" placeholder="Enter your New Password" name="password" required> <br>
+                    <input type="submit" value="login" id="login">
+                    <br>
+                </form>
+                <a href="/register">create account?</a>
+            </div>
+        </center>
+
+    </body>
+
+</html> 
