@@ -1,0 +1,71 @@
+<div>
+  <link rel="stylesheet" href="/java.css">
+  <h2>Exception Handling. </h2>
+  <h3>What is Exception in Java?</h3>
+  <p>Exception in Java is an event that interrupts the execution of program instructions and disturbs the normal flow of program execution. It is an object that wraps an error event information that occurred within a method and it is passed to the runtime system</p>
+  <h4>Types Of Errors</h4>
+  <ol>
+    <li>Compile time Errors
+      <ul>
+        <li>Syntax errors</li>
+        <p>Instead of declaring int a; you mistakenly declared it as in a; for which compiler will throw an error.</p>
+        <li>Runtime Errors</li>
+        <p>A Runtime error is called an Exceptions error. It is any event that interrupts the normal flow of program execution.</p>
+      </ul>
+    </li>
+    <li>Runtime Errors</li>
+  </ol>
+  <h3>Try Catch Block</h3>
+  <p>Java provides an inbuilt exceptional handling. <br>
+    1.	The normal code goes into a TRY block. <br>
+    2.	The exception handling code goes into the CATCH block
+    </p>
+    <h4>Syntax for try and catch</h4>
+    <div id="code">
+      try{ <br>
+        statement(s) <br>
+    } <br>
+    catch (exceptiontype name){ <br>
+      statement(s) <br>
+    } <br>
+    
+    </div>
+    <h5>Example</h5>
+    <div id="code">
+      class JavaException { <br>
+        public static void main(String args[]){ <br>
+           int d = 0; <br>
+           int n = 20; <br>
+           int fraction = n/d; <br>
+          System.out.println("End Of Main"); <br>
+        } <br>
+     } <br>
+     
+    </div>
+    <h5>Example to understand try and catch</h5>
+    <div id="code">
+      <span class="class">class</span> <span class="class-name">JavaException</span> { <br>
+        public static void main(String args[]) { <br>
+         try { <br>
+          int d = 1; <br>
+          int n = 20; <br>
+          int fraction = n / d; <br>
+          int g[] = { <br>
+           1<br>
+          }; <br>
+          g[20] = 100;<br>
+         }<br>
+         /*catch(Exception e){ <br>
+           System.out.println("In the catch block due to Exception = "+e);<br>
+         }*/ <br>
+         catch (ArithmeticException e) { <br>
+          System.out.println("In the catch block due to Exception = " + e); <br>
+         } catch (ArrayIndexOutOfBoundsException e) { <br>
+          System.out.println("In the catch block due to Exception = " + e); <br>
+         } <br>
+         System.out.println("End Of Main"); <br>
+        } <br>
+       }
+       
+    </div>
+</div>
