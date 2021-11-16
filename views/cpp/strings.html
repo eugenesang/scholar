@@ -1,0 +1,57 @@
+<div>
+  <link rel="stylesheet" href="/cpp.css">
+  <h2>C++ Strings: strcpy(), strcat(), strlen(), strcmp().</h2>
+  <h3>What is a String?</h3>
+  <p>
+    A string is a sequence of characters. A C++ string is an object of the std::string class.<br> The characters are stored sequences of bytes with access to a single character byte allowed.<br>
+    C++ strings allocate memory dynamically.<br> More memory can be allocated to the string during run time if needed. </p>
+    <div id="code">
+     <h3> Accessing string Values</h3>
+
+
+<p>
+  #include <iostream><br>
+    using namespace std;
+</p><br>
+int main() {<br>
+	char name[5] = { 'J', 'o', 'h', 'n', '\0' };<br>
+	<p>cout << "String value is: ";</p><br>
+	<p>
+    cout << name << endl;
+  </p><br>
+	return 0;<br>
+}
+
+    </div>
+    <h3>String Functions:</h3>
+     
+      <h4>strcpy()</h4>
+      <p>
+        This is the string copy function. It copies one string into another string.<br>
+      Syntax: <br>
+      strcpy(string1, string2);<br>
+      The two parameters to the function, string1 and string2, are strings. The function will copy the string string1 into the string 1.
+      </p>
+     <h4> strcat()</h4>
+     <p>
+      This is the string concatenate function. It concatenates strings.<br>
+      Syntax:<br>
+      strcat(string1, string2);<br>
+      The two parameters to the function, string1 and string2 are the strings to be concatenated.<br> The above function will concatenate the string string2 to the end of the string string1.<br>
+      
+     </p>   
+     <h4>strlen()</h4>
+     <p>This is the string length function. It returns the length of the string passed to it as the argument.<br><br>
+      Syntax:<br>
+      strnlen(string1)<br>
+      The parameter string1 is the name of the string whose length is to be determined. <br>The above function will return the length of the string string1.<br>
+      </p> 
+     <h4>strcmp()</h4>
+      <p>
+        This is the string compare function. It is used for string comparison.<br>
+      Syntax:<br>
+      strcmp(string1, string2);<br>
+      The above function will return 0 if strings string1 and string2 are similar, <br>less than 0 if string1<string2 and greater than 0 if string1>string2.
+      </p>
+      
+</div>
