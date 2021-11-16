@@ -1,0 +1,197 @@
+<div>
+  <link rel="stylesheet" href="/cpp.css">
+  <p>
+    An operator is a symbol used for performing operations on operands. An operator operates operands. <br>The operations can be mathematical or logical.<br> There are different types of operators in C++ for performing different operations.
+  </p>
+  <p>
+    Arithmetic Operators <br>
+    They are the types of operators used for performing mathematical/arithmetic operations. They include: <br>
+    <div id="code">
+      <p>
+        #include <iostream><br>
+          using namespace std;
+      </p><br>
+        int main() {<br>
+          int a = 11;<br>
+          int b = 5;<br>
+          int c;<br>
+          <br>
+          <p>
+            cout << "a + b is :" << a+b << endl; //11+5<br>
+        
+          cout << "a - b is :" << a-b << endl; //11-5<br>
+          <br>
+          cout << "a * b is :" << a*b << endl; //11*5<br>
+          <br>
+          cout << "a / b is :" << a/b << endl; //11/5<br>
+          <br>
+          cout << "a % b is :" << a%b << endl; //11%5<br>
+          cout << "a++ is :" << a++ << endl; //11++<br>
+          <br>
+          cout << "a-- is :" << a-- << endl; //12--
+          </p><br>
+          <br>
+          return 0;<br>
+        }
+        
+    </div>
+Relational Operators <br>
+These types of operators perform comparisons on operands. For example, you may need to know which operand is greater than the other, or less than the other.  <br>
+<div id="code">
+ <p>
+  #include <iostream><br>
+    using namespace std;
+ </p><br>
+    <br>
+    int main() {<br>
+      int a = 11;<br>
+      int b = 5;<br>
+      <br>
+      <p>
+        cout << "a=11, b=5" << endl;<br>
+      if (a == b) {<br>
+        cout << "a == b is true" << endl;<br>
+      }<br>
+      else {<br>
+        cout << " a == b is false" << endl;<br>
+      }<br>
+      if (a < b) {<br>
+        cout << "a < b is true" << endl;<br>
+      }<br>
+      else {<br>
+        cout << "a < b is false" << endl;<br>
+      }<br>
+      <br>
+      if (a > b) {<br>
+        cout << "a > b is true" << endl;<br>
+      }<br>
+      else {<br>
+        cout << "a > b is false" << endl;
+      </p><br>
+      }<br>
+      <br>
+      return 0;<br>
+    }
+        
+</div>
+Logical Operators. <br>
+The logical operators combine two/more constraints/conditions.<br> Logical operators also complement evaluation of original condition under consideration.  <br>
+<div id="code">
+ <p>
+  #include <iostream> <br>
+    using namespace std;
+ </p><br>
+    int main()<br>
+    {<br>
+      int a = 5, b = 2, c = 6, d = 4;<br>
+      if (a == b && c > d)<br>
+        cout << "a equals to b AND c is greater than d\n";<br>
+        complement evaluation of original condition under consideration. They include:<br>
+        <br>
+        <p>
+          Operator	Description<br>
+        && logical AND operator.	The condition is true if both operands are not zero.<br>
+        || logical OR operator.	The condition is true if one of the operands is non-zero.<br>
+        ! logical NOT operator.	It reverses operand's logical state. If the operand is true, the ! operator makes it false.
+        </p><br>
+        For example:<br>
+        <br>
+        <p>
+          #include <iostream> <br>
+            using namespace std;
+        </p><br>
+        int main()<br>
+        {<br>
+          int a = 5, b = 2, c = 6, d = 4;<br>
+          if (a == b && c > d)<br>
+            <p>
+              cout << "a equals to b AND c is greater than d\n";<br>
+          else<br>
+            cout << "AND operation returned false\n";<br>
+            <br>
+          if (a == b || c > d)<br>
+            cout << "a equals to b OR c is greater than d\n";<br>
+          else<br>
+            cout << "Neither a is equal to b nor c is greater than d\n";<br>
+            <br>
+          if (!b)<br>
+            cout << "b is zero\n";<br>
+          else<br>
+            cout << "b is not zero";
+            </p><br>
+            <br>
+          return 0;<br>
+        }
+            
+</div>
+Bitwise Operators <br>
+            <p>
+Bitwise operators perform bit-level operations on operands. First, operators are converted to bit level then operations <br>are performed on the operands. When arithmetic operations like addition and subtraction are done at bit level,<br> results can be achieved faster. </p><br> 
+<div id="code">
+ <p>
+  #include <iostream><br>
+    using namespace std;
+ </p><br>
+    <br>
+    int main() {<br>
+      unsigned int p = 60;	  // 60 = 0011 1100  <br>
+      unsigned int q = 13;	  // 13 = 0000 1101<br>
+      int z = 0;<br>
+      <br>
+      z = p & q;<br>
+      <p>
+        cout << "p&q is : " << z << endl; // 12 = 0000 1100<br>
+                z = p | q;<br>
+      cout << "p|q is : " << z << endl; // 61 = 0011 1101<br>
+      <br>
+      z = p ^ q;<br>
+      cout << "p^q is : " << z << endl; // 49 = 0011 0001<br>
+      <br>
+      z = ~p;<br>
+      cout << "~p is : " << z << endl; // -61 = 1100 0011<br>
+      <br>
+      z = p << 2;<br>
+      cout << "p<<2 is: " << z << endl; // 240 = 1111 0000<br>
+        <br>
+      z = p >> 2;<br>
+      cout << "p>>2 is : " << z << endl; // 15 = 0000 1111
+      </p><br>
+      <br>
+      return 0;<br>
+    }
+        
+</div>
+
+<h4>Assignment Operators.</h4>  <br>
+<p></p>
+Assignment operators assign values to variables. The operand/variable is added to left side of the operator while <br>the value is added to the right side of the operator. The variable and the value must belong to the same data type, otherwise, <br>the C++ compiler will raise error.</p>  <br>
+<div id="code">
+  #include <iostream> <br>
+    using namespace std;<br>
+    int main()<br>
+    {<br>
+      int x = 5;<br>
+    <p>
+      cout << "Initial value of x is " << x << "\n";<br>
+      <br>
+      x += 5;<br>
+      cout << "x += 5 gives :" << x << "\n";<br>
+      <br>
+      x -= 5;<br>
+      cout << "x -= 5 gives : " << x << "\n";<br>
+      <br>
+      x *= 5;<br>
+      cout << "x *= 5 gives :" << x << "\n";<br>
+      <br>
+      x /= 5;<br>
+      cout << "x /= 5 gives : " << x << "\n";
+    </p><br>
+      <br>
+      return 0;<br>
+    }
+    
+</div>
+
+  </p>
+ 
+</div>
