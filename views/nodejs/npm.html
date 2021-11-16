@@ -1,0 +1,53 @@
+<div>
+  <link rel="stylesheet" href="/node.css">
+ <h2> Node.js NPM</h2>
+<h3>What is NPM?</h3>
+ 
+
+<p>NPM is a package manager for Node.js packages, or modules if you like. <br>
+  www.npmjs.com hosts thousands of free packages to download and use. <br>
+  The NPM program is installed on your computer when you install Node.js <br>
+  NPM is already ready to run on your computer!</p>
+ 
+<h4>What is a Package?</h4>
+<p>A package in Node.js contains all the files you need for a module. <br>
+  Modules are JavaScript libraries you can include in your project.</p>
+
+ 
+   
+  <h4>Download a Package</h4>
+ <p>
+  Downloading a package is very easy. <br>
+  Open the command line interface and tell NPM to download the package you want. <br>
+  I want to download a package called "upper-case": <br>
+  Download "upper-case": <br>
+  C:\Users\Your Name>npm install upper-case <br>
+  Now you have downloaded and installed your first package! <br>
+  NPM creates a folder named "node_modules", where the package will be placed. <br> All packages you install in the future will be placed in this folder.
+ </p>
+ 
+<h4>  Using a Package</h4>
+  <p>
+    Once the package is installed, it is ready to use. <br>
+  Include the "upper-case" package the same way you include any other module: <br>
+  var uc = require('upper-case'); <br>
+  Create a Node.js file that will convert the output "Hello World!" into upper-case letters: <br>
+  </p>
+
+ <div id="code">
+  var http = require('http'); <br>
+ <p> var uc = require('upper-case'); <br>
+  http.createServer(function (req, res) {</p> <br>
+    <p>
+      res.writeHead(200, {'Content-Type': 'text/html'});  <br>
+    res.write(uc.upperCase("Hello World!")); <br>
+    res.end(); <br>
+    </p>
+  }).listen(8080);
+ </div>
+  
+ 
+
+ 
+  
+</div>
