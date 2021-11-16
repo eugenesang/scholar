@@ -1,0 +1,38 @@
+<div>
+  <link rel="stylesheet" href="/cpp.css">
+  <h2>C++ Pointers.</h2>
+  <p>In C++, a pointer refers to a variable that holds the address of another variable. Like regular variables, pointers<br> have a data type. For example, a pointer of type integer can hold the address of a variable of type integer. A pointer<br> of character type can hold the address of a variable of character type.</p><br>
+  <div id="code">
+    <h4>pointers declaration syntax</h4>
+    
+int    *x;    <p>// a pointer to integer</p><br>
+double *x;    <p>// a pointer to double</p><br>
+float  *x;    <p>// a pointer to float</p><br>
+char   *ch     <p>// a pointer to a character</p><br>
+<p>Reference operator (&) and Deference operator (*)<br>
+  The reference operator (&) returns the variable's address.<br>
+  The dereference operator (*) helps us get the value that has been stored in a memory address.</p>
+
+  </div>
+  <div id="code">
+    <h4>Example</h4>
+   <p> #include <iostream><br>
+    using namespace std;</p><br>
+      int main() {<br>
+        int  x = 27;  <br>
+        int  *ip;     <br>   
+        ip = &x;<br>       
+        <p>
+          cout << "Value of x is : ";<br>
+        cout << x << endl;<br>
+        cout << "Value of ip is : ";<br>
+        cout << ip<< endl;<br>
+        cout << "Value of *ip is : ";<br>
+        cout << *ip << endl;<br>
+        </p>
+        return 0; <br>
+      }
+     
+            
+  </div>
+</div>
