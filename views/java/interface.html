@@ -1,0 +1,35 @@
+<div>
+  <link rel="stylesheet" href="/java.css">
+  <h2>Interface in Java .</h2>
+  <h3>What is Interface in Java?</h3>
+  <p>An Interface in Java programming is defined as an abstract type used to specify the behavior of a class. A Java interface contains static constants and abstract methods. </p>
+  <h5>Syntax</h5>
+  <div id="code">
+    interface { <br>
+      //methods <br>
+      }
+      
+  </div>
+  <h3>Implementing Interface</h3>
+  <div id="code">
+    <span class="class">class</span> <span class="class-name">Dog implements Pet</span> <br>
+interface RidableAnimal extends Animal, Vehicle <br>
+
+  </div>
+  <h4>Java Interface Example:</h4>
+  <div id="code">
+    interface Pet{ <br>
+      public void test(); <br>
+    } <br>
+    <span class="class">class</span><span class="class-name">Dog implements Pet</span> { <br>
+       public void test(){ <br>
+         System.out.println("Interface Method  <br>Implemented"); <br>
+      }<br>
+       public static void main(String args[]){<br>
+         Pet p = new Dog();<br>
+         p.test();<br>
+      }<br>
+    }
+    
+  </div>
+</div>
