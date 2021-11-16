@@ -1,0 +1,54 @@
+<div>
+  <link rel="stylesheet" href="/es6.css">
+<h2>JavaScript Promises</h2>  
+
+<p>Promise Syntax</p>
+<div id="code">
+  let myPromise = new Promise(function(myResolve, myReject) { <br>
+   <p> // "Producing Code" (May take some time)</p> <br>
+     <br>
+      myResolve(); // when successful <br>
+      myReject();  // when error <br>
+    }); <br>
+     <br>
+    <p>// "Consuming Code" (Must wait for a fulfilled Promise).</p> <br>
+    myPromise.then( <br>
+      function(value) { /* code if successful */ }, <br>
+      function(error) { /* code if some error */ } <br>
+    ); <br>
+</div>
+<h3>Using a Promise</h3>
+<div id="code">
+  <p>let myPromise = new Promise(function(myResolve, myReject) { <br>
+    setTimeout(function() { myResolve("I love You !!"); }, 3000);</p> <br>
+  });<br>
+  <br>
+  myPromise.then(function(value) { <br>
+   <p> document.getElementById("demo").innerHTML = value;</p> <br>
+  });
+</div>
+
+
+<div id="code">
+ <h3> The Symbol Type <br>
+  Example</h3>
+const person = { <br>
+  <p>
+    firstName: "John", <br>
+  lastName: "Doe", <br>
+  age: 50, <br>
+  eyeColor: "blue"
+  </p> <br>
+}; <br>
+ <br>
+let id = Symbol('id'); <br>
+person[id] = 140353; <br>
+<p>
+  // Now Person[id] = 140353 <br>
+// but person.id is still undefined 
+</p><br>
+ <br>
+</div>
+
+
+</div>
