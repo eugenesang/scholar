@@ -1,0 +1,111 @@
+/* styling learn page */
+#docunits {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  margin: 20px 5px;
+
+  height: 40%;
+}
+
+#docunits a {
+background-color: blue;
+text-decoration: none;
+font-size: 18px;
+letter-spacing: 1.5px;
+padding: 10px;
+margin: 10px;
+color: white;
+border-radius: 10px;
+}
+#cssl{
+background-color: rgb(185, 182, 182);
+padding: 25px;
+margin: 10px;
+width: 40%;
+border-radius: 15px;
+}
+#htmll {
+  background-color: rgb(185, 182, 182);
+  padding: 25px;
+  margin: 10px;
+  width: 40%;
+  border-radius: 15px;
+}
+#cppl {
+  background-color: rgb(185, 182, 182);
+  padding: 25px;
+  margin: 10px;
+  width: 40%;
+  border-radius: 15px;
+}
+#jsl {
+  background-color: rgb(185, 182, 182);
+  padding: 25px;
+  margin: 10px;
+  width: 40%;
+  border-radius: 15px;
+}
+#javal{
+  background-color: rgb(185, 182, 182);
+  padding: 25px;
+  margin: 10px;
+  width: 40%;
+  border-radius: 15px;
+}
+#pythonl {
+  background-color: rgb(185, 182, 182);
+  padding: 25px;
+  margin: 10px;
+  width: 40%;
+  border-radius: 15px;
+}
+.learn {
+  margin: 0px;
+  width: 100%;
+  padding: 15px;
+  background-color: rgb(40, 240, 40);
+}
+.learn a {
+  color: white;
+  font-size: 20px;
+  font-style: inherit;
+  padding: 13px;
+  margin: 15px;
+  text-decoration: none;
+}
+.learn a:hover {
+  background-color: white;
+  color: red;
+  letter-spacing: 2px;
+  border-bottom: 2px solid
+  blue;
+}
+.learn h4{
+float: left;
+margin-left: 3%;
+}
+.toplogo{
+  background-color: rgb(107, 235, 107);
+  height: 14%;
+  margin: 0px;
+}
+#learn2 {
+  background-color: rgb(59, 57, 57);
+}
+.richcotent{
+  background-color: rgb(82, 80, 80);
+  padding: 20px;
+}
+.richcotent a{
+text-decoration: none;
+padding: 10px;
+margin: 10px;
+background-color: rgb(60, 240, 60);
+color: white;
+letter-spacing: 2px;
+font-size: 18px;
+border-radius: 5px;
+margin-left: 60%;
+margin-bottom: 20px;
+}
