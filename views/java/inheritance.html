@@ -1,0 +1,48 @@
+<div>
+  <link rel="stylesheet" href="/java.css">
+  <h2>Inheritance in Java OOPs </h2>
+  <h5>What is Inheritance?</h5>
+  <p>Inheritance is a mechanism in which one class acquires the property of another class.</p>
+  <h3>Types of Inheritance.</h3>
+  <ol>
+    <li>Single Inheritance</li>
+    <p>In Single Inheritance one class extends another class (one class only).</p>
+    <li>Multiple Inheritance</li>
+    <p>In Multiple Inheritance, one class extending more than one class. Java does not support multiple inheritance.</p>
+    <li>Multilevel Inheritance:</li>
+    <p>In Multilevel Inheritance, one class can inherit from a derived class. Hence, the derived class becomes the base class for the new class.</p>
+    <li>Hierarchical Inheritance:</li>
+    <p>In Hierarchical Inheritance, one class is inherited by many sub classes.</p>
+  </ol>
+  <h3>Syntax</h3>
+  <div id="code">
+    <span class="class">class</span> <span class="class-name">subClass extends superClass</span> <br> 
+{  <br>
+   //methods and fields  <br>
+}  <br>
+</div>
+<h3>Java Inheritance Example</h3>
+<div id="code">
+  <span class="class">class</span>n>
+  <span class="class-name">Doctor</span> {<br>
+    void Doctor_Details() {<br>
+     System.out.println("Doctor Details...");<br>
+    }<br>
+   }<br>
+   
+   <span class="class">class</span> <span class="class-name">Surgeon Extend Doctor</span> {<br>
+    void Surgeon_Details() {<br>
+     System.out.println("Surgen Detail...");<br>
+    }<br>
+   }<br>
+   
+   <span class="class">class</span><span class="class-name">Hospital</span> {<br>
+    public static void main(String args[]) {<br>
+     Surgeon s = new Surgeon();<br>
+     s.Doctor_Details(); <br>
+     s.Surgeon_Details(); <br>
+    } <br>
+   }
+   
+</div>
+  </div>
