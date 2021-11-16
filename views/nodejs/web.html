@@ -1,0 +1,52 @@
+<div>
+  <link rel="stylesheet" href="/node.css">
+  <h2>Node.js as a Web Server</h2>
+  <p>The HTTP module can create an HTTP server that listens to server ports and gives a response back to the client.
+    Use the createServer() method to create an HTTP server:
+  </p>
+    <div id="code">
+      Example
+    var http = require('http');
+    </div>
+    
+   <p> //create a server object:</p>
+    <div id="code">
+      http.createServer(function (req, res) {
+        res.write('Hello World!'); <p>//write a response to the client</p>
+        res.end(); <p>//end the response</p>
+      }).listen(8080); <p>//the server object listens on port 8080</p>
+    </div>
+    
+   <p> The function passed into the http.createServer() method, will be executed when someone tries to access the computer on port 8080.</p>
+   <h3>Add an HTTP Header</h3>
+    <p>If the response from the HTTP server is supposed to be displayed as HTML, you should include an HTTP header with the correct content type:</p>
+   <div id="code">
+    
+    <h3>sample</h3>
+    var http = require('http');<br>
+    http.createServer(function (req, res) {<br>
+      res.writeHead(200, {'Content-Type': 'text/html'});<br>
+     <p> res.write('Hello World!');<br>
+      res.end();<br>
+    }).listen(8080); <br></p>
+   </div>
+    
+    <p>The first argument of the res.writeHead() method is the status code, 200 means that all is OK, the second argument is an object containing the response headers.</p>
+     
+   <h3> Read the Query String</h3>
+   <p>
+    The function passed into the http.createServer() has a req argument that represents the request from the client, as an object (http.IncomingMessage object). <br>
+    This object has a property called "url" which holds the part of the url that comes after the domain name:</p>
+   
+    
+    <div id="code">
+      demo_http_url.js <br>
+      var http = require('http'); <br>
+     <p> http.createServer(function (req, res) { <br>
+      res.writeHead(200, {'Content-Type': 'text/html'}); <br>
+      res.write(req.url); <br>
+      res.end(); <br></p>
+      }).listen(8080); <br>
+    </div>
+    
+</div>
