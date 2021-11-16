@@ -1,0 +1,64 @@
+<div>
+  <link rel="stylesheet" href="/java.css">
+  <h2>Constructor Overloading in Java: </h2>
+  <h3>What is Constructor in Java?</h3>
+  <p>CONSTRUCTOR is a special method that is used to initialize a newly created object and is called just after the memory is allocated for the object. </p>
+  <div id="code">
+    <span class="class">class</span> <span class="class-name">Demo</span>{ <br>
+      int  value1; <br>
+      int  value2; <br>
+      Demo(){ <br>
+         value1 = 10; <br>
+         value2 = 20; <br>
+         System.out.println("Inside Constructor"); <br>
+     }<br>
+     <br>
+     public void display()<span class="class-name"> public void display()</span>{ <br>
+        System.out.println("Value1 === "+value1); <br>
+        System.out.println("Value2 === "+value2); <br>
+    } <br>
+    <br>
+   public static void main(String args[]){ <br>
+       Demo d1 = new Demo(); <br>
+      d1.display(); <br>
+  } <br>
+} 
+
+  </div>
+  <h3>What is Constuctor Overloading In Java</h3>
+  <p>Java Constructor overloading is a technique in which a class can have any number of constructors that differ in parameter list. The compiler differentiates these constructors by taking into account the number of parameters in the list and their type.</p>
+  <h5>example</h5>
+  <div id="code">
+    <span class="class">class</span>Demo{ <br>
+      int  value1;<br>
+      int  value2;<br>
+      /*Demo(){<br>
+       value1 = 10;<br>
+       value2 = 20;<br>
+       System.out.println("Inside 1st Constructor");<br>
+     }*/<br>
+     Demo(int a){<br>
+      value1 = a;<br>
+      System.out.println("Inside 2nd Constructor");<br>
+    }<br>
+    Demo(int a,int b){ <br>
+    value1 = a; <br>
+    value2 = b; <br>
+    System.out.println("Inside 3rd Constructor"); <br>
+   }<br>
+   public void display(){ <br>
+      System.out.println("Value1 === "+value1); <br>
+      System.out.println("Value2 === "+value2); <br>
+  <span class="class-name">}
+    public static void main</span><br>(String args[]){ <br>
+    Demo d1 = new Demo();<br>
+    Demo d2 = new Demo(30);<br>
+    Demo d3 = new Demo(30,40);<br>
+    d1.display();<br>
+    d2.display(); <br>
+    d3.display();<br>
+ } <br>
+} <br>
+<p>Compile and then run the code</p>
+  </div>
+</div>
