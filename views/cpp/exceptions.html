@@ -1,0 +1,46 @@
+<div>
+  <link rel="stylesheet" href="/cpp.css">
+  <h2>C++ File Handling: </h2>
+  <p>
+    Files store data permanently in a storage device. With file handling, the output from a program can be stored in a file.<br> Various operations can be performed on the data while in the file.
+  </p>
+  <p>
+    <h4>The fstream Library</h4>
+The fstream library provides C++ programmers with three classes for working with files. These classes include:
+<br>
+ofstream- This class represents an output stream. It's used for creating files and writing information to files.<br>
+ifstream- This class represents an input stream. It's used for reading information from data files.<br>
+fstream- This class generally represents a file stream. It comes with ofstream/ifstream capabilities. This means it'<br> capable of creating files, writing to files, reading from data files.<br>
+Tfstream library<br>
+To use the above classes of the fstream library, you must include it in your program as a header file. Of course, you <br>will use the #include preprocessor directive. You must also include the iostream header file.<br>
+
+  </p>
+  <h4>
+    How to Open Files
+  </h4>
+  <p>Before performing any operation on a file, you must first open it. If you need to write to the file, open it using <br>fstream or ofstream objects. If you only need to read from the file, open it using the ifstream object.<br>
+    The three objects, that is, fstream, ofstream, and ifstream, have the open() function defined in them. The function <br>takes this syntax:<br>
+
+    open (file_name, mode);
+    </p>
+    <div id="code"><br>
+      <p>
+        #include <iostream><br>
+          #include <fstream><br>
+          using namespace std;
+      </p><br>
+        int main() {<br>
+          fstream my_file;<br>
+          my_file.open("my_file", ios::out);<br>
+          if (!my_file) {<br>
+            <p>cout << "File not created!";</p><br>
+          }<br>
+          else {<br>
+            <p>cout << "File created successfully!";<br>
+              my_file.close();</p> <br>
+          }<br>
+          return 0;<br>
+        }
+        
+    </div>
+</div>
