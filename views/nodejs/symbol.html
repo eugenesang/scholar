@@ -1,0 +1,67 @@
+<div>
+  <link rel="stylesheet" href="/es6.css">
+ <h2> If you create two symbols with the same description they will have different values.</h2>
+
+<p>Symbol("id") == Symbol("id") // false</p>
+
+<p>Default Parameter Values <br>
+  ES6 allows function parameters to have default values.
+  </p>
+<div id="code">
+  <h4>Sample</h4>
+function myFunction(x, y = 10) { <br>
+ <p> // y is 10 if not passed or undefined </p><br>
+  return x + y; <br>
+} <br>
+myFunction(5); // will return 15 <br>
+Function Rest Parameter <br>
+<p>The rest parameter (...) allows a function to treat an indefinite number of arguments as an array:</p> <br>
+ <br>
+<h4>sample</h4>
+function sum(...args) { <br>
+  let sum = 0; <br>
+ <p> for (let arg of args) sum += arg; <br>
+  return sum; <br></p>
+} <br>
+ <br>
+let x = sum(4, 9, 16, 25, 29, 1, 66, 77); <br>
+Array.find() <br>
+</div>
+<p>
+  The find() method returns the value of the first array element that passes a test function.
+<br>
+This example finds (returns the value of ) the first element that is larger than 18:
+
+</p>
+<div id="code">
+ <h4> Sample</h4>
+var numbers = [4, 9, 16, 25, 29]; <br>
+<p>var first = numbers.find(myFunction);</p> <br>
+ <br>
+function myFunction(value, index, array) { <br>
+  return value > 18; <br>
+} <br>
+<p>Note that the function takes 3 arguments:</p>
+ <br>
+The item value <br>
+The item index <br>
+The array itself <br>
+Array.findIndex() <br>
+<p>
+  The findIndex() method returns the index of the first array element that passes a test function.
+<br>
+This example finds the index of the first element that is larger than 18:
+</p>
+
+</div>
+<div id="code">
+ <h4> Sample</h4>
+<p>var numbers = [4, 9, 16, 25, 29];</p> <br>
+var first = numbers.findIndex(myFunction); <br>
+ <br>
+<p>function myFunction(value, index, array) { <br>
+  return value  > 18;</p> <br>
+} <br>
+</div>
+
+</div>
