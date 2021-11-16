@@ -1,0 +1,53 @@
+<div>
+  <link rel="stylesheet" href="/java.css">
+  <h2>What is Class and Object in Java OOPS? </h2>
+  <p>Classes and Objects in Java are the fundamental components of OOP's. </p>
+  <h3>
+    What is Class in Java?
+    </h3>
+    <p>Class are a blueprint or a set of instructions to build a specific type of object</p>
+    <h5>syntax</h5>
+    <div id="code">
+      class <class_name>{   <br>
+        field;   <br>
+        method; <br>  
+      }  
+    
+    </div>
+    <h3>What is Object in Java?</h3>
+    <p>Object is an instance of a class. An object in OOPS is nothing but a self-contained component which consists of methods and properties to make a particular type of data useful. </p>
+    <h5>syntax</h5>
+    <div id="code">
+      <span class="class">className</span>ReferenceVariable = new ClassName();
+    </div>
+    <h4>Example of java classes and objects</h4>
+    <div id="code">
+      // Class Declaration<br>
+      <span class="class">Public class</span> <span class="class-name">Dog</span> {<br>
+    // Instance Variables <br>
+    String breed; <br>
+    String size; <br>
+    int age; <br>
+    String color; <br>
+
+  
+    // method 1 <br>
+    public String getInfo() {<br>
+        return ("Breed is: "+breed+" Size is:"+size+" Age is:"+age+" <br>color is: "+color);<br>
+    }<br>
+    <br>
+    <br>
+    public static void main<span class="class-name">public static void mainr</span>(String[] args) {<br>
+        Dog maltese = new Dog();<br>
+        maltese.breed="Maltese";<br>
+        maltese.size="Small";<br>
+        maltese.age=2;<br>
+        maltese.color="white";<br>
+        System.out.println(maltese.getInfo());<br>
+    }<br>
+} <br>
+Output: <br>
+Breed is: Maltese Size is:Small Age is:2 color is: white
+
+    </div>
+</div>
