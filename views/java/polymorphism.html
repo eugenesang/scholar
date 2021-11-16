@@ -1,0 +1,53 @@
+<div>
+  <link rel="stylesheet" href="/java.css">
+  <h2>Polymorphism in Java </h2>
+  <h3>What is Polymorphism in Java?</h3>
+  <p>Polymorphism in Java occurs when there are one or more classes or objects related to each other by inheritance. It is the ability of an object to take many forms</p>
+  <h3>Method Overriding in Java</h3>
+  <p>Method Overriding is redefining a super class method in a sub class.</p>
+  <h5>Example</h5>
+  <div id="code">
+     <span class="class">class Doctor</span>{ <br>
+     {<span class="class-name">public void treatPatient()</span> <br>
+      // treatPatient method<br>
+      <br>
+    }<br>
+   r<span class="class"> class Surgeon extends Docto</span>{<br>
+      <span class="class-name">public void treatPatient()</span>{<br>
+      // treatPatient method<br>
+      }<br>
+    }<br>
+    <span class="class">class Run</span>{<br>
+      public static void main (String args[]){<br>
+        <span class="class">Doctor doctorObj = new Doctor()</span><br>
+      // treatPatient method in class Doctor will be <br>executed
+        doctorObj.treatPatient();<br>
+       
+        
+        <span class="class">Surgeon surgeonObj = new Surgeon();</span><br>
+        // treatPatient  method in class Surgeon  <br>will be executed
+        surgeonObj.treatPatient();<br>
+      }<br>
+    }<br>
+  </div>
+    <h5>Method Overloading</h5>
+    <p>Method overloading is when one of the methods in the super class is redefined in the sub-class. In this case, the signature of the method remains the same.</p>
+    <h5>Example</h5>
+    <div id="code">
+      <span class="class">class C</span>{<br>
+        public int sum(){ <br>
+           // some code <br>
+        }<br>
+      }<br>
+      <br>
+      <span class="class">class  Y extends X</span>{ <br>
+        public int sum(){ <br>
+          //overridden method <br>
+         //signature is same <br>
+       }<br>
+      } <br>
+      
+    </div>
+    
+  
+</div>
