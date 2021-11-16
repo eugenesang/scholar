@@ -1,0 +1,74 @@
+<div>
+  <link rel="stylesheet" href="/cpp.css">
+  <h2>C++ Operator Overloading :</h2>
+  <p>Using operator overloading in C++, you can specify more than one meaning for an operator in one scope. The purpose <br>of operator overloading is to provide a special meaning of an operator for a user-defined data type.</p><br>
+  <div id="code">
+    <h4>Example</h4> <br>
+    <p>
+      #include <iostream> <br>
+        using namespace std;
+    </p><br>
+      class TestClass { <br>
+      private:<br>
+      int count;<br>
+      public:<br>
+        TestClass() : count(5) {}<br>
+        void operator --() {<br>
+        <p>
+          count = count - 3;<br>
+        }<br>
+        void Display() { <br>
+      
+          cout << "Count: " << count;
+        </p> }<br>
+      };<br>
+      
+      int main() {<br>
+        TestClass tc;<br>
+        --tc;<br>
+        tc.Display();<br>
+        return 0;<br>
+      }
+      
+  </div>
+  <h4>Rules for Operator Overloading:</h4> <br>
+  <p>
+   
+    For it to work, at least one operand must be a user-defined class object.<br>
+    You can only overload existing operators. You can't overload new operators.<br>
+    Some operators cannot be overloaded using a friend function. However, such operators can be overloaded using member <br>function.<br>
+    </p>
+    <h4>How to overload an operator</h4> <br>
+    <div id="code">
+      <h4>Example</h4> <br>
+     <p>
+      #include <iostream>  <br> 
+        using namespace std;
+     </p><br>
+        class OperatorOverload {<br>
+        private:<br>
+          int x;<br>
+          <br>
+        public:<br>
+         <p>
+          OperatorOverload() : x(10) {}<br>
+          void operator ++() {
+         </p><br>
+            x = x + 2;<br>
+          } <br>
+          void Print() {<br>
+         <p>   cout << "The Count is: " << x;</p><br>
+            }<br>
+        };<br>
+        int main() {<br>
+          <p>
+            OperatorOverload ov;<br>
+          ++ov;   <br>
+          ov.Print();<br>
+          return 0;
+          </p><br>
+        }<br>
+        
+        
+    </div>
+</div>
