@@ -1,0 +1,35 @@
+div {
+  background-color: #fff;
+  margin: 20px;
+}
+#code {
+  background-color: rgb(176, 238, 176);
+  padding: 20px;
+  margin: 5px;
+  box-shadow: 1px 2px 3px 1px; 
+  letter-spacing: 1.5px;
+  width: 50%;
+  height: 150px;
+  overflow-y: auto;
+  overflow-x: auto;
+  color: rgb(233, 104, 175);
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+  font-style: bold
+  ;
+
+}
+#code::content {
+  line-height: 40px;
+}
+.class {
+  color: rgb(59, 228, 67);
+}
+.class-name {
+  color: blue;
+}
+ol li {
+  color: blue;
+  font-size: 16px;
+  letter-spacing: 1.5px;
+}
