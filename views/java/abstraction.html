@@ -1,0 +1,35 @@
+<div>
+  <link rel="stylesheet" href="/java.css">
+  <h2>Abstraction in Java | Abstract Class & Method </h2>
+  <p>Abstraction in JAVA shows only the essential attributes and hides unnecessary details of the object from the user. </p>
+  <h3>What is Abstract Class?</h3>
+  <p>ABSTRACT CLASS is a type of class in Java, that declare one or more abstract methods. These classes can have abstract methods as well as concrete methods. </p>
+  <p>If you observe the Shape class serves in our goal of achieving inheritance and polymorphism. But it was not built to be instantiated. Such classes can be labelled Abstract. An abstract java class cannot be instantiated.</p>
+  <h5>Syntax</h5>
+  <div id="code">
+     <span class="class"> abstract Class</span> <span class="class-name">Shape</span>{ <br>
+      // code <br>
+    } <br>
+    
+  </div>
+  <h3>What are Abstract Methods?</h3>
+  <p>ABSTRACT METHOD in Java, is a method that has just the method definition but does not contain implementation. </p>
+  <h5>Syntax</h5>
+  <div id="code">
+    abstract public void calculateArea();
+  </div>
+  <h4>Abstraction Code Example</h4>
+  <div id="code">
+    <span class="class">abstract class</span><span class="class-name"> Shape</span>{   <br>
+      abstract void calculateArea();   <br>
+    }  <br>
+    public class solo<span class="class">public class solo</span> <span class="class-name">extends Shape</span>{   <br>
+    void calculateArea(){System.out.println("Area of Shape");}  <br>
+    public static void main(String args[]){  <br>
+     Shape obj = new solo();  <br>
+     obj.run();  <br>
+    }  <br>
+    }
+    
+  </div>
+</div>
